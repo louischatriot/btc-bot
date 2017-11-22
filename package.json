@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "concat-stream": "^1.6.0",
     "gdax": "^0.4.2"
   }
 }
