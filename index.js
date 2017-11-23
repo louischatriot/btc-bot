@@ -6,7 +6,7 @@ const Transform = require('stream').Transform;
 const publicClient = new Gdax.PublicClient("btc-eur");
 
 
-var trades = publicClient.getProductTradeStream(5560405,5560622);
+var trades = publicClient.getProductTradeStream(5520405,5560622);
 trades.on('error', err => { console.log(err); process.exit(1); })
 trades.on('end', noMoreTrades);
 
