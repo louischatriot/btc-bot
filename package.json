@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "concat-stream": "^1.6.0",
-    "gdax": "^0.4.2",
-    "nedb": "^1.8.0"
+    "gdax": "github:coinbase/gdax-node",
+    "nedb": "^1.8.0",
+    "nedb-logger": "^0.1.0",
+    "papaparse": "^4.3.6"
   }
 }
