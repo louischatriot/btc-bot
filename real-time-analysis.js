@@ -42,11 +42,13 @@ setInterval(function () {
 
     if ((orderBook.price - basePosition > detectionThreshold * basePosition) && (currentMovement !== 'up')) {
       console.log("UP   movement starting at: " + (new Date()) + "   - and price: " + orderBook.price);
+      movementsLogger.insert({ direction: 'up', date: new Date(), price: orderBook.price, orderBook: orderBook });
       currentMovement = 'up';
     }
 
     if ((orderBook.price - basePosition < - detectionThreshold * basePosition) && (currentMovement !== 'down')) {
       console.log("DOWN movement starting at: " + (new Date()) + "   - and price: " + orderBook.price);
+      movementsLogger.insert({ direction: 'down', date: new Date(), price: orderBook.price, orderBook: orderBook });
       currentMovement = 'down';
     }
 
