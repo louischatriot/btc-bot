@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "atob": "^2.0.3",
+    "btoa": "^1.1.2",
     "concat-stream": "^1.6.0",
     "gdax": "github:coinbase/gdax-node",
     "nedb": "^1.8.0",
