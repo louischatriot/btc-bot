@@ -32,15 +32,25 @@ const btcbot = new Btcbot();
 
 
 
-authedClient.getAccounts(function (err, res, accounts) {
-  console.log("==========================");
+var buyParams = { price: '100.00'
+                , size: '1'
+                , product_id: 'BTC-EUR'
+                , type: 'limit'
+                , time_in_force: 'GTC'
+                , post_only: true   // true to make sure order is a maker
+                };
+authedClient.buy(buyParams, function (err, res, order) {
   console.log(err);
-  console.log(accounts);
+  console.log(res.statusCode);   // Anything but a 200 means order was not placed
+  console.log(order);
 });
 
 
 
 
+
+
+// Uncomment for testing
 return;   // Don't use process.exit or the code exits before receiving the results
 
 
